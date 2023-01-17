@@ -30,12 +30,12 @@ const getRepeaterWidht = (screenLayout: layoutType) => {
 //=============================
 // Component to be rendered
 //=============================
-const Mentors: types.Brick<HeroUnitProps> = ({ padding, screenLayout = 'base', }) => {
+const Modules: types.Brick<HeroUnitProps> = ({ padding, screenLayout = 'base', }) => {
   return (
     <div >
       <div className='py-12 flex flex-wrap   justify-center items-center'>
           <Repeater
-          propName="mentorCard"
+          propName="moduleCard"
           renderWrapper={(items) => (
             <div
               className={classNames(
@@ -61,14 +61,14 @@ const Mentors: types.Brick<HeroUnitProps> = ({ padding, screenLayout = 'base', }
 //=============================
 // Brick Schema
 //=============================
-Mentors.schema = {
-  name: 'mentors',
-  label: 'Mentors',
+Modules.schema = {
+  name: 'modules',
+  label: 'Modules',
   getDefaultProps: () => ({
     padding: 'big',
     title: 'This is a custom Unit',
     text: "We are a hi-tech web development company committed to deliver great products on time. We love to understand our customers' needs and exceed expectations.",
-     'mentorCard': [
+     'moduleCard': [
       {
         title: 'Front-end development',
         text: 'We are specialized in the development of React web applications. For public websites we use Next.js or Gatbsy, based on the type of project.',
@@ -79,36 +79,24 @@ Mentors.schema = {
             'https://st.depositphotos.com/2101611/3925/v/950/depositphotos_39258205-stock-illustration-businessman-avatar-profile-picture.jpg',
           srcSet: '',
         },
+        moduleListItem:[
+              {
+        color: "#000",
+          text: "New item",
+          title: "New Item"
+      
       },
-      {
-        title: 'Request feedback',
-        text: 'We are specialized in the development of React web applications. For public websites we use Next.js or Gatbsy, based on the type of project.',
-        screenLayout: 'base',
-        image: {
-          src: 'https://st.depositphotos.com/2101611/3925/v/950/depositphotos_39258205-stock-illustration-businessman-avatar-profile-picture.jpg',
-          placeholderSrc:
-            'https://st.depositphotos.com/2101611/3925/v/950/depositphotos_39258205-stock-illustration-businessman-avatar-profile-picture.jpg',
-          srcSet: '',
-        },
+        ]
       },
-      {
-        title: 'Front-end development',
-        text: 'We are specialized in the development of React web applications. For public websites we use Next.js or Gatbsy, based on the type of project.',
-        screenLayout: 'base',
-        image: {
-          src: 'https://st.depositphotos.com/2101611/3925/v/950/depositphotos_39258205-stock-illustration-businessman-avatar-profile-picture.jpg',
-          placeholderSrc:
-            'https://st.depositphotos.com/2101611/3925/v/950/depositphotos_39258205-stock-illustration-businessman-avatar-profile-picture.jpg',
-          srcSet: '',
-        },
-      },
+     
+    
     ],
   }),
     repeaterItems: [
     {
-      name: 'mentorCard',
-      itemType: 'mentorCard',
-      itemLabel: 'Mentor Card',
+      name: 'moduleCard',
+      itemType: 'moduleCard',
+      itemLabel: 'Module Card',
       min: 0,
       max: 20,
     },
@@ -148,4 +136,4 @@ Mentors.schema = {
   ],
 }
 
-export default Mentors
+export default Modules

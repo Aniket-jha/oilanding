@@ -5,6 +5,12 @@ import HeroUnit from './MyHeroUnit'
 import Banner from './Banner'
 import MentorCard from './MentorCard'
 import Mentors from './Mentors'
+import Customer from './Tool'
+import Tools from './Tools'
+import Tool from './Tool'
+import ModuleCard from './ModuleCard'
+import ModuleListItem from './ModuleListitem'
+import Modules from './Modules'
 
 const bricks: types.Brick<any>[] = [
   ...website, // React Bricks UI
@@ -12,7 +18,13 @@ const bricks: types.Brick<any>[] = [
   Mentors,
   MentorCard,
   HeroUnit,
-  Banner
+  ModuleCard,
+  Banner,
+  ModuleListItem,
+  Modules,
+  
+  
+  Tool
    // Example custom brick
   // Put here your other bricks...
 ]
